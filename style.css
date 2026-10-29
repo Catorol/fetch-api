@@ -1,0 +1,60 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#users {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+article {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+article[data-state="loading"] {
+  opacity: 0.6;
+}
+
+article[data-state="error"] {
+  border-color: #c0392b;
+  background: #fdecea;
+}
+
+article[data-state="aborted"] {
+  border-color: #999;
+  background: #f0f0f0;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+#summary {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+#summary[data-state="error"] {
+  color: #c0392b;
+}
+
+#summary[data-state="aborted"] {
+  color: #666;
+}
